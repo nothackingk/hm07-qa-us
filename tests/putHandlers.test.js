@@ -10,7 +10,7 @@ const requestBody = {
     ]
 }
 // kits api - PUT request- Changing the kits items [/api/v1/kits/{id}]
-test('status code should be 200 OK', async () => {
+test('PUT test 1 Changing the kit - status code should be 200 OK', async () => {
 	let actualStatusCode;
     try {
 		const response = await fetch(`${config.API_URL}/api/v1/kits/7`, {
@@ -28,7 +28,7 @@ test('status code should be 200 OK', async () => {
 });
 
 //response body should validate if items were added/changed in the kit
-test('response body should contain ok true ', async () => {
+test('Put test 2 Changing the kit - response body should contain ok true ', async () => {
 	let actualResponsebody;
     try {
 		const response = await fetch(`${config.API_URL}/api/v1/kits/7`, {

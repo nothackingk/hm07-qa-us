@@ -2,7 +2,7 @@
 const config = require('../config');
 
 //Deleting a set by id - /api/v1/kits/{id}
-test('successfull kit deletion status code 200', async () => {
+test('DELETE Test 1 checks that deleting an existing order returns a 200 status code', async () => {
 	let actualStatusCode;
     try {
 		const response = await fetch(`${config.API_URL}/api/v1/kits/1`, {
@@ -15,8 +15,8 @@ test('successfull kit deletion status code 200', async () => {
 	expect(actualStatusCode).toBe(200);
 });
 
-
-test('body should contain "ok" true as the response', async () => {
+//response body should validate boolean value as true
+test('DELETE test 2 body should contain "ok" true as the response for deleting an existing order', async () => {
 	let actualResponseBody;
     try {
 		const response = await fetch(`${config.API_URL}/api/v1/kits/1`, {
